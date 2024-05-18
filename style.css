@@ -1,0 +1,452 @@
+/* CSS for a Greek god-themed portfolio */
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #f8f9fa; /* Light background */
+  color: #333;
+}
+header {
+  background-color: #282424;
+  color: white;
+  padding: 10px 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Cinzel', serif;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 93%;
+}
+
+.nav-menu .logo {
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: auto; /* Aligns the logo to the left */
+  font-family: 'Cinzel', serif; /* Classical font */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul li {
+  padding: 0 15px;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #555;
+}
+
+.resume-btn {
+  background-color: gold;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #c7a600;
+  transform: translateY(-3px);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home-header {
+  background-color: #282424;
+  color: white;
+  padding: 10px 110px;
+  display: flex;
+  justify-content: center; /* Center the logo */
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Cinzel', serif;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+blockquote {
+  font-size: 40px;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.scroll-down {
+  position: absolute; /* Position it absolutely within the hero section */
+  bottom: 50px; /* Adjust this value to move it closer or further from the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-down img {
+  width: 50px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Space between arrows */
+  animation: bounce 2s infinite;
+}
+
+/* Adjust the bounce animation for each arrow */
+.scroll-down img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.scroll-down img:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.introduction {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Cinzel', serif;
+  border-top: 3px solid gold; /* Gold accent */
+  background: url('greek-pattern.png') no-repeat center center; /* Subtle Greek pattern background */
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.introduction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85); /* Subtle overlay to enhance readability */
+  z-index: -1;
+}
+
+.introduction h2 {
+  font-size: 36px;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 2px solid gold; /* Gold underline */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.introduction p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #555; /* Slightly darker shade for better readability */
+}
+
+.cta-button {
+  background-color: gold;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #c7a600;
+  transform: translateY(-3px);
+}
+
+/* Ensure the section is not blocked by the fixed header */
+.who-am-i {
+  padding: 80px 20px 20px 20px; /* Add top padding to account for the header height */
+  text-align: center;
+  background-color: #282424;
+  color: gold;
+  font-family: 'Cinzel', serif;
+  border-bottom: 3px solid gold; /* Gold accent */
+}
+
+.who-am-i h2 {
+  font-size: 36px;
+  color: #fff; /* Gold color */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.about-me {
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between;
+  max-width: 1200px;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 450px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  margin-right: 20px;
+  object-fit: cover;
+  border: 0px solid gold; /* Gold border */
+}
+
+.about-text {
+  flex: 1;
+  color: #333;
+  padding-left: 100px;
+  font-family: 'Cinzel', serif;
+}
+
+.about-text h2 {
+  color: #333;
+  margin-top: 0;
+  position: relative;
+  top: -10px; /* Adjust this value to move the heading up or down */
+  left: 150px; /* Adjust this value to move the heading left or right */
+  font-family: 'Cinzel', serif;
+}
+
+.about-text p {
+  color: #333;
+  line-height: 1.6;
+  margin: 10px 0; /* Adjust the margin for better spacing */
+}
+
+.about-text p.justify {
+  text-align: justify; /* Justify the paragraph */
+}
+
+.foster-logo {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 20px;
+  position: relative;
+  top: 40px; /* Adjust this value to move the logo up or down */
+  left: 130px; /* Adjust this value to move the logo left or right */
+}
+
+.interests-section {
+  background-color: #282424;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid gold; /* Gold accent */
+  font-family: 'Cinzel', serif;
+}
+
+.interests-section h2 {
+  color: #fff; /* Change this to your desired color */
+}
+
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.interest-item img {
+  width: 50px; /* Adjust based on your preference */
+  height: 50px; /* Adjust to maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+/* Text */
+.interest-item p {
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+}
+
+.projects-section {
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid gold; /* Gold accent */
+  font-family: 'Cinzel', serif;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #0000001a;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-info {
+  background: #00000080; /* Semi-transparent overlay for text readability */
+  color: white;
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  font-family: 'Cinzel', serif;
+}
+
+.project-link {
+  color: gold; /* Gold color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.contact-section {
+  background-color: #333333;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+  border-top: 3px solid gold; /* Gold accent */
+  font-family: 'Cinzel', serif;
+}
+
+.contact-container p {
+  margin: 10px 0;
+  font-family: 'Cinzel', serif;
+}
+
+.contact-container a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  margin: 0 5px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .introduction {
+    padding: 30px 15px;
+  }
+
+  .introduction h2 {
+    font-size: 28px;
+  }
+
+  .introduction p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu ul.hidden {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
